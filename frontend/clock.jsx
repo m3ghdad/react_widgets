@@ -28,10 +28,16 @@ class Clock extends React.Component {
     return (
       <div>
         <h1>Clock</h1>
-        <p>{`${hours}::${minutes}::${seconds}`}</p>
+        <div className="clock">
+        <p>
+          <span>Time:</span>
+          <span>{hours}:{minutes}:{seconds}</span>
+        </p>
+        <p>Date : {this.state.time.toDateString()}</p>
+        </div>
       </div>
-    )
+    );
   }
-}
+};
 
 module.exports = Clock;
